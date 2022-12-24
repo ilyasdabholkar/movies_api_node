@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "f80e8bc5-bc56-436e-8956-af472226de28",
+		"name": "Movies_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15811809"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ilyasdabholkar9@gmail.com\",\r\n    \"name\" : \"ilyas dabholkar\",\r\n    \"password\" : \"Pass@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/6395bdfc00823736847ea5f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"6395bdfc00823736847ea5f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Pass@123\",\r\n    \"email\":\"ilyasdabholkar9@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateGenre",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"horror\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/genres/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"genres",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllGenres",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/genres/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"genres",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGenreById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/genres/6396001c7fcf27d5b455447d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"genres",
+						"6396001c7fcf27d5b455447d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGenre",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/genres/6396001c7fcf27d5b455447d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"genres",
+						"6396001c7fcf27d5b455447d"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateGenre",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/genres/63960461ada2206587a25e87",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"genres",
+						"63960461ada2206587a25e87"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddMovie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Phir Hera Pheri\",\r\n    \"numberInStock\": 35,\r\n    \"dailyRentalRate\":15,\r\n    \"genreId\":\"6395ff8d7fcf27d5b4554479\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovieById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/movies/63960bb68e90e6f34896aa0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"63960bb68e90e6f34896aa0c"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMovie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Jumanji: Welcome to the Jungl‪e‬\",\r\n    \"numberInStock\": 31,\r\n    \"dailyRentalRate\":11,\r\n    \"genreId\":\"63960461ada2206587a25e87\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/movies/63960bb68e90e6f34896aa0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"63960bb68e90e6f34896aa0c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMovie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTViZGZjMDA4MjM3MzY4NDdlYTVmMSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDc3NDY0OCwiZXhwIjoxNjcxMDMzODQ4fQ.RVccM86FtkZP2WbNQ-v6rygCpMcsQE8W4NfXmXyyJNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/movies/63961cb4fc9f8f0d30357926",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"movies",
+						"63961cb4fc9f8f0d30357926"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abhishek\",\r\n    \"isGold\": true,\r\n    \"phone\": \"8787676543\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/customers/63a498efa26bad0f2c9433fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"63a498efa26bad0f2c9433fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ilyas\",\r\n    \"isGold\": true,\r\n    \"phone\": \"9876543212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/customers/63a498efa26bad0f2c9433fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"63a498efa26bad0f2c9433fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/customers/63a498efa26bad0f2c9433fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"63a498efa26bad0f2c9433fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReturnMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\":\"63960a4a1d9cdabbd0fb0bee\",\r\n    \"customerId\":\"63a498aca26bad0f2c9433fb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/returns/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"returns",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllRentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/rentals/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"rentals",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRental",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\":\"63960a4a1d9cdabbd0fb0bee\",\r\n    \"customerId\":\"63a498aca26bad0f2c9433fb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/rentals/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"rentals",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRentalById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/rentals/63a720a15610891a533ba934",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"rentals",
+						"63a720a15610891a533ba934"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

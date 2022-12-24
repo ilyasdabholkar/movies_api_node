@@ -1,0 +1,7 @@
+{
+  "JWT_SECRET": "unsecureKey",
+  "DATABASE_URL": "mongodb+srv://root:jx0FGL8WqwIk6UiL@nodeecommerceapi.so43a.mongodb.net/movies_api",
+  "PORT": "5000",
+  "ENCRYPTION_SECRET": "moviesapisecret",
+  "AUTHENTICATION_ENABLED": false
+}
